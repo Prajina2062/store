@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class loan extends Model
 {
-    protected $fillable=['name','amount'];
+    protected $fillable=['client_id','amount'];
     use HasFactory;
      public function Client()
     {

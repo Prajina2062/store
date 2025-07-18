@@ -4,7 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\loan;
 use Illuminate\Http\Request;
-
+use App\Models\Client;
+use Carbon\Carbon;
 class LoanController extends Controller
 {
     /**
@@ -14,8 +15,8 @@ class LoanController extends Controller
      */
     public function index()
     {
-                   $data=Loan::all();
-        return view('loan.index',compact('data'));
+        $prazina=Loan::all();
+        return view('loan.table',compact('prazina'));
     }
 
     /**
